@@ -20,3 +20,12 @@ pipelines:
           onExecute:
             - echo $MY_MESSAGE
             - echo “running CI for master”
+      - name: step_2
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myAppRepo
+        execution:
+          onExecute:
+            - echo "This is step two"
+            - echo “running CI for master Second step!”
